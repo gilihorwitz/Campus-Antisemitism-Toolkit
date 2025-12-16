@@ -66,6 +66,28 @@ strong {
     color: var(--white);
     padding: 2rem 0;
     text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.main-header::before {
+    content: '';
+    position: absolute;
+    left: -80px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 280px;
+    height: 280px;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpolygon points='50,10 90,75 10,75' fill='none' stroke='%23ffffff' stroke-width='2'/%3E%3Cpolygon points='50,90 10,25 90,25' fill='none' stroke='%23ffffff' stroke-width='2'/%3E%3C/svg%3E");
+    background-size: contain;
+    background-repeat: no-repeat;
+    opacity: 0.3;
+    pointer-events: none;
+}
+
+.main-header .container {
+    position: relative;
+    z-index: 1;
 }
 
 .main-header h1 {
